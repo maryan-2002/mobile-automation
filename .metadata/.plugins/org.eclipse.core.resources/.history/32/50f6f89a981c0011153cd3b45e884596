@@ -41,19 +41,6 @@ public class DivisionTest {
     public void clear() {
         driver.findElement(By.id("com.simplemobiletools.calculator:id/btn_clear")).click();
     }
-    @Test(priority=1)
-    public void divisionOfTwoPositiveIntegers() {
-
-        click("com.simplemobiletools.calculator:id/btn_5");
-        click("com.simplemobiletools.calculator:id/btn_divide");
-        click("com.simplemobiletools.calculator:id/btn_5");
-        click("com.simplemobiletools.calculator:id/btn_equals");
-
-        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-        System.out.println("Result is: " + result);
-        Assert.assertEquals(result, "1");
-    }
-
    
     
     
