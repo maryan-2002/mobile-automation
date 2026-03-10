@@ -189,6 +189,21 @@ public class DivisionTest {
 		System.out.println(toastText);
 		Assert.assertEquals(toastText, "Error: division by zero");
 	}
+	@Test(priority =10)
+	public void divideIntegerNumberByDecimalNumber() {
+		clear();
+		
+		click("com.simplemobiletools.calculator:id/btn_5");// 5
+		click("com.simplemobiletools.calculator:id/btn_divide");// div
+		click("com.simplemobiletools.calculator:id/btn_2");// 2
+		click("com.simplemobiletools.calculator:id/btn_decimal");// .
+		click("com.simplemobiletools.calculator:id/btn_5");// 5
+		click("com.simplemobiletools.calculator:id/btn_equals");// =
+
+		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+		System.out.println("Result is: " + result);
+		Assert.assertEquals(result, "2");
+	}
 	@BeforeMethod
 	public void resetApp() throws InterruptedException {
 		driver.terminateApp("com.simplemobiletools.calculator");
