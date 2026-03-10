@@ -16,31 +16,33 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class DivisionTest {
 
-    private AndroidDriver driver;
-    private WebDriverWait wait;
+	private AndroidDriver driver;
+	private WebDriverWait wait;
 
-    @BeforeClass
-    public void setup() throws Exception {
+	@BeforeClass
+	public void setup() throws Exception {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("appium:platformVersion", "15");
-        capabilities.setCapability("appium:deviceName", "emulator-5556");
-        capabilities.setCapability("appium:automationName", "UiAutomator2");
-        capabilities.setCapability("appium:app", "C:\\Users\\maria\\Downloads\\simplecalculator.apk");
-        capabilities.setCapability("appium:appPackage", "com.simplemobiletools.calculator");
-        capabilities.setCapability("appium:appActivity", ".activities.SplashActivity.Orange");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("appium:platformVersion", "15");
+		capabilities.setCapability("appium:deviceName", "emulator-5556");
+		capabilities.setCapability("appium:automationName", "UiAutomator2");
+		capabilities.setCapability("appium:app", "C:\\Users\\maria\\Downloads\\simplecalculator.apk");
+		capabilities.setCapability("appium:appPackage", "com.simplemobiletools.calculator");
+		capabilities.setCapability("appium:appActivity", ".activities.SplashActivity.Orange");
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4729/wd/hub"), capabilities);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    }
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4729/wd/hub"), capabilities);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	}
 
-    public void click(String id) {
-        wait.until(driver -> driver.findElement(By.id(id))).click();
-    }
-    public void clear() {
-        driver.findElement(By.id("com.simplemobiletools.calculator:id/btn_clear")).click();
-    }
+	public void click(String id) {
+		wait.until(driver -> driver.findElement(By.id(id))).click();
+	}
+
+	public void clear() {
+		driver.findElement(By.id("com.simplemobiletools.calculator:id/btn_clear")).click();
+	}
+
     @Test(priority=1)
     public void divisionOfTwoPositiveIntegers() {
 
@@ -59,7 +61,7 @@ public class DivisionTest {
     	click("com.simplemobiletools.calculator:id/btn_minus");//minus
         click("com.simplemobiletools.calculator:id/btn_5");//5
         click("com.simplemobiletools.calculator:id/btn_divide");//div
-    	click("com.simplemobiletools.calculator:id/btn_minus");//minus
+		  click("com.simplemobiletools.calculator:id/btn_minus");//minus
         click("com.simplemobiletools.calculator:id/btn_5");//5
         click("com.simplemobiletools.calculator:id/btn_equals");//=
 
@@ -68,15 +70,30 @@ public class DivisionTest {
         Assert.assertEquals(result, "1");
     }
 
-    @BeforeMethod
-    public void resetApp() throws InterruptedException {
-    	driver.terminateApp("com.simplemobiletools.calculator");
-    	driver.activateApp("com.simplemobiletools.calculator");
-        Thread.sleep(2000);
+	@Test(priority = 3)
+	public void divisionOfOnePositvieByOtherNegativeInteger() {
+		clear();
+		click("com.simplemobiletools.calculator:id/btn_minus");// minus
+		click("com.simplemobiletools.calculator:id/btn_5");// 5
+		click("com.simplemobiletools.calculator:id/btn_divide");// div
+		click("com.simplemobiletools.calculator:id/btn_5");// 5
+		click("com.simplemobiletools.calculator:id/btn_equals");// =
 
-    }
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+		System.out.println("Result is: " + result);
+		Assert.assertEquals(result, "-1");
+	}
+
+	@BeforeMethod
+	public void resetApp() throws InterruptedException {
+		driver.terminateApp("com.simplemobiletools.calculator");
+		driver.activateApp("com.simplemobiletools.calculator");
+		Thread.sleep(2000);
+
+	}
+
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
+	}
 }
