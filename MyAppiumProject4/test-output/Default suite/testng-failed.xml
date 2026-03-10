@@ -6,8 +6,8 @@
       <class name="tests.DivisionTest">
         <methods>
           <include name="tearDown"/>
-          <include name="divisionOfOnePositvieByOtherNegativeInteger"/>
           <include name="setup"/>
+          <include name="divisionOfTwoNegativeIntegers"/>
           <include name="resetApp"/>
         </methods>
       </class> <!-- tests.DivisionTest -->

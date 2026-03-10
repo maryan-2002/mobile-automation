@@ -71,7 +71,7 @@ public class DivisionTest {
     }
 
 	@Test(priority = 3)
-	public void divisionOfOnePositvieByOtherNegativeInteger() {
+	public void divisionOfOneNegativeByOtherPositvieInteger() {
 		clear();
 		click("com.simplemobiletools.calculator:id/btn_minus");// minus
 		click("com.simplemobiletools.calculator:id/btn_5");// 5
@@ -83,6 +83,7 @@ public class DivisionTest {
 		System.out.println("Result is: " + result);
 		Assert.assertEquals(result, "-1");
 	}
+	
 
 	@BeforeMethod
 	public void resetApp() throws InterruptedException {
