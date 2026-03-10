@@ -290,3 +290,9 @@ java -ea -classpath C:\Users\maria\Downloads\eclipse-java-2024-06-R-win32-x86_64
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-10 21:46:17.638
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-10 21:50:35.367
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-10 21:50:35.373
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

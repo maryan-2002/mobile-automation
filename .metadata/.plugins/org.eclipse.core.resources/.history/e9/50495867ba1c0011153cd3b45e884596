@@ -204,23 +204,6 @@ public class DivisionTest {
 		System.out.println("Result is: " + result);
 		Assert.assertEquals(result, "2");
 	}
-	@Test(priority =11)
-	public void divideDecimalNumberByIntegerNumber() {
-		clear();
-		
-		click("com.simplemobiletools.calculator:id/btn_5");// 5
-		click("com.simplemobiletools.calculator:id/btn_decimal");// .
-		click("com.simplemobiletools.calculator:id/btn_5");// 5
-		click("com.simplemobiletools.calculator:id/btn_divide");// div
-		click("com.simplemobiletools.calculator:id/btn_2");// 2
-		click("com.simplemobiletools.calculator:id/btn_equals");// =
-
-		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-		System.out.println("Result is: " + result);
-		Assert.assertEquals(result, "2.75");
-	}
-	
-	
 	@BeforeMethod
 	public void resetApp() throws InterruptedException {
 		driver.terminateApp("com.simplemobiletools.calculator");
