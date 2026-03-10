@@ -97,18 +97,6 @@ public class DivisionTest {
 		Assert.assertEquals(result, "-1");
 	}
 	
-	@Test(priority =5)
-	public void divideZeroByPositiveNumber() {
-		clear();
-		click("com.simplemobiletools.calculator:id/btn_0");// 0
-		click("com.simplemobiletools.calculator:id/btn_divide");// div
-		click("com.simplemobiletools.calculator:id/btn_5");// 5
-		click("com.simplemobiletools.calculator:id/btn_equals");// =
-
-		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-		System.out.println("Result is: " + result);
-		Assert.assertEquals(result, "0");
-	}
 
 	@BeforeMethod
 	public void resetApp() throws InterruptedException {

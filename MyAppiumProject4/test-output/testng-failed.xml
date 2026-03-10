@@ -8,8 +8,8 @@
           <include name="tearDown"/>
           <include name="divisionOfOnePositvieByOtherNegativeInteger"/>
           <include name="setup"/>
-          <include name="resetApp"/>
           <include name="divisionOfTwoNegativeIntegers"/>
+          <include name="resetApp"/>
         </methods>
       </class> <!-- tests.DivisionTest -->
     </classes>
