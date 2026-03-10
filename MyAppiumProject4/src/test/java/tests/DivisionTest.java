@@ -53,10 +53,21 @@ public class DivisionTest {
         System.out.println("Result is: " + result);
         Assert.assertEquals(result, "1");
     }
+    @Test(priority=2)
+    public void divisionOfTwoNegativeIntegers() {
+    	clear();
+    	click("com.simplemobiletools.calculator:id/btn_minus");//minus
+        click("com.simplemobiletools.calculator:id/btn_5");//5
+        click("com.simplemobiletools.calculator:id/btn_divide");//div
+    	click("com.simplemobiletools.calculator:id/btn_minus");//minus
+        click("com.simplemobiletools.calculator:id/btn_5");//5
+        click("com.simplemobiletools.calculator:id/btn_equals");//=
 
-   
-    
-    
+        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+        System.out.println("Result is: " + result);
+        Assert.assertEquals(result, "1");
+    }
+
     @BeforeMethod
     public void resetApp() throws InterruptedException {
     	driver.terminateApp("com.simplemobiletools.calculator");
