@@ -6,7 +6,7 @@
       <class name="tests.DivisionTest">
         <methods>
           <include name="tearDown"/>
-          <include name="divideZeroByNegativeNumber"/>
+          <include name="dividePositiveByZero"/>
           <include name="setup"/>
           <include name="resetApp"/>
         </methods>
