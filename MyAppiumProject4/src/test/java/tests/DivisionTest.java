@@ -168,7 +168,27 @@ public class DivisionTest {
 		System.out.println(toastText);
 		Assert.assertEquals(toastText, "Error: division by zero");
 	}
-	
+	@Test(priority =9)
+	public void divideZeroByZero() {
+		clear();
+		
+		click("com.simplemobiletools.calculator:id/btn_0");// 0		
+		click("com.simplemobiletools.calculator:id/btn_divide");// div
+
+		click("com.simplemobiletools.calculator:id/btn_0");// 0
+
+		click("com.simplemobiletools.calculator:id/btn_equals");// =
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		WebElement toast = wait.until(
+		        ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.Toast"))
+		);
+
+		String toastText = toast.getText();
+
+		System.out.println(toastText);
+		Assert.assertEquals(toastText, "Error: division by zero");
+	}
 	@BeforeMethod
 	public void resetApp() throws InterruptedException {
 		driver.terminateApp("com.simplemobiletools.calculator");

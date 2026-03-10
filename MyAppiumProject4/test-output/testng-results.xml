@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-10T21:12:28 EET" name="Default suite" finished-at="2026-03-10T21:13:11 EET" duration-ms="42252">
+  <suite started-at="2026-03-10T21:35:38 EET" name="Default suite" finished-at="2026-03-10T21:36:24 EET" duration-ms="45448">
     <groups>
     </groups>
-    <test started-at="2026-03-10T21:12:28 EET" name="Default test" finished-at="2026-03-10T21:13:11 EET" duration-ms="42252">
+    <test started-at="2026-03-10T21:35:38 EET" name="Default test" finished-at="2026-03-10T21:36:24 EET" duration-ms="45448">
       <class name="tests.DivisionTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:12:28 EET" name="setup" finished-at="2026-03-10T21:12:55 EET" duration-ms="26643" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:35:39 EET" name="setup" finished-at="2026-03-10T21:36:07 EET" duration-ms="28605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:12:55 EET" name="resetApp" finished-at="2026-03-10T21:13:00 EET" duration-ms="5295" status="PASS">
+        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:36:07 EET" name="resetApp" finished-at="2026-03-10T21:36:13 EET" duration-ms="5723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetApp -->
-        <test-method signature="dividePositiveByZero()[pri:6, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:13:00 EET" name="dividePositiveByZero" finished-at="2026-03-10T21:13:09 EET" duration-ms="9029" status="PASS">
+        <test-method signature="divideZeroByZero()[pri:9, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:36:13 EET" name="divideZeroByZero" finished-at="2026-03-10T21:36:22 EET" duration-ms="9034" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dividePositiveByZero -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:13:09 EET" name="tearDown" finished-at="2026-03-10T21:13:11 EET" duration-ms="1106" status="PASS">
+        </test-method> <!-- divideZeroByZero -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T21:36:22 EET" name="tearDown" finished-at="2026-03-10T21:36:24 EET" duration-ms="1949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
