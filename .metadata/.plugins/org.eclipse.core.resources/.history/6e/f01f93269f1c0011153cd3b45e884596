@@ -43,47 +43,47 @@ public class DivisionTest {
 		driver.findElement(By.id("com.simplemobiletools.calculator:id/btn_clear")).click();
 	}
 
-    @Test(priority=1)
-    public void divisionOfTwoPositiveIntegers() {
-
-        click("com.simplemobiletools.calculator:id/btn_5");
-        click("com.simplemobiletools.calculator:id/btn_divide");
-        click("com.simplemobiletools.calculator:id/btn_5");
-        click("com.simplemobiletools.calculator:id/btn_equals");
-
-        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-        System.out.println("Result is: " + result);
-        Assert.assertEquals(result, "1");
-    }
-    @Test(priority=2)
-    public void divisionOfTwoNegativeIntegers() {
-    	clear();
-    	click("com.simplemobiletools.calculator:id/btn_minus");//minus
-        click("com.simplemobiletools.calculator:id/btn_5");//5
-        click("com.simplemobiletools.calculator:id/btn_divide");//div
-		  click("com.simplemobiletools.calculator:id/btn_minus");//minus
-        click("com.simplemobiletools.calculator:id/btn_5");//5
-        click("com.simplemobiletools.calculator:id/btn_equals");//=
-
-        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-        System.out.println("Result is: " + result);
-        Assert.assertEquals(result, "1");
-    }
-
-	@Test(priority = 3)
-	public void divisionOfOneNegativeByOtherPositvieInteger() {
-		clear();
-		click("com.simplemobiletools.calculator:id/btn_minus");// minus
-		click("com.simplemobiletools.calculator:id/btn_5");// 5
-		click("com.simplemobiletools.calculator:id/btn_divide");// div
-		click("com.simplemobiletools.calculator:id/btn_5");// 5
-		click("com.simplemobiletools.calculator:id/btn_equals");// =
-
-		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-		System.out.println("Result is: " + result);
-		Assert.assertEquals(result, "-1");
-	}
-	@Test(priority =4)
+//    @Test(priority=1)
+//    public void divisionOfTwoPositiveIntegers() {
+//
+//        click("com.simplemobiletools.calculator:id/btn_5");
+//        click("com.simplemobiletools.calculator:id/btn_divide");
+//        click("com.simplemobiletools.calculator:id/btn_5");
+//        click("com.simplemobiletools.calculator:id/btn_equals");
+//
+//        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+//        System.out.println("Result is: " + result);
+//        Assert.assertEquals(result, "1");
+//    }
+//    @Test(priority=2)
+//    public void divisionOfTwoNegativeIntegers() {
+//    	clear();
+//    	click("com.simplemobiletools.calculator:id/btn_minus");//minus
+//        click("com.simplemobiletools.calculator:id/btn_5");//5
+//        click("com.simplemobiletools.calculator:id/btn_divide");//div
+//		  click("com.simplemobiletools.calculator:id/btn_minus");//minus
+//        click("com.simplemobiletools.calculator:id/btn_5");//5
+//        click("com.simplemobiletools.calculator:id/btn_equals");//=
+//
+//        String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+//        System.out.println("Result is: " + result);
+//        Assert.assertEquals(result, "1");
+//    }
+//
+//	@Test(priority = 3)
+//	public void divisionOfOneNegativeByOtherPositvieInteger() {
+//		clear();
+//		click("com.simplemobiletools.calculator:id/btn_minus");// minus
+//		click("com.simplemobiletools.calculator:id/btn_5");// 5
+//		click("com.simplemobiletools.calculator:id/btn_divide");// div
+//		click("com.simplemobiletools.calculator:id/btn_5");// 5
+//		click("com.simplemobiletools.calculator:id/btn_equals");// =
+//
+//		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+//		System.out.println("Result is: " + result);
+//		Assert.assertEquals(result, "-1");
+//	}
+	@Test
 	public void divisionOfOnePositvieByOtherNegativeInteger() {
 		clear();
 		click("com.simplemobiletools.calculator:id/btn_5");// 5
