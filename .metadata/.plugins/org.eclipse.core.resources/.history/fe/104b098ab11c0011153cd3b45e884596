@@ -102,6 +102,7 @@ public class DivisionTest {
 //		clear();
 //		click("com.simplemobiletools.calculator:id/btn_0");// 0
 //		click("com.simplemobiletools.calculator:id/btn_divide");// div
+//		click("com.simplemobiletools.calculator:id/btn_minus");// minus
 //		click("com.simplemobiletools.calculator:id/btn_5");// 5
 //		click("com.simplemobiletools.calculator:id/btn_equals");// =
 //
@@ -115,8 +116,6 @@ public class DivisionTest {
 		clear();
 		click("com.simplemobiletools.calculator:id/btn_0");// 0
 		click("com.simplemobiletools.calculator:id/btn_divide");// div
-		click("com.simplemobiletools.calculator:id/btn_minus");// minus
-
 		click("com.simplemobiletools.calculator:id/btn_5");// 5
 		click("com.simplemobiletools.calculator:id/btn_equals");// =
 

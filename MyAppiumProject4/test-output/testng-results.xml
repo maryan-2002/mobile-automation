@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-10T20:39:09 EET" name="Default suite" finished-at="2026-03-10T20:40:26 EET" duration-ms="76522">
+  <suite started-at="2026-03-10T20:47:13 EET" name="Default suite" finished-at="2026-03-10T20:47:58 EET" duration-ms="44393">
     <groups>
     </groups>
-    <test started-at="2026-03-10T20:39:09 EET" name="Default test" finished-at="2026-03-10T20:40:26 EET" duration-ms="76522">
+    <test started-at="2026-03-10T20:47:13 EET" name="Default test" finished-at="2026-03-10T20:47:58 EET" duration-ms="44393">
       <class name="tests.DivisionTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:09 EET" name="setup" finished-at="2026-03-10T20:39:31 EET" duration-ms="21246" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T20:47:14 EET" name="setup" finished-at="2026-03-10T20:47:38 EET" duration-ms="24319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:31 EET" name="resetApp" finished-at="2026-03-10T20:39:36 EET" duration-ms="5571" status="PASS">
+        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T20:47:38 EET" name="resetApp" finished-at="2026-03-10T20:47:46 EET" duration-ms="7900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetApp -->
-        <test-method signature="divisionOfTwoPositiveIntegers()[pri:1, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:36 EET" name="divisionOfTwoPositiveIntegers" finished-at="2026-03-10T20:39:41 EET" duration-ms="4350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- divisionOfTwoPositiveIntegers -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:41 EET" name="resetApp" finished-at="2026-03-10T20:39:47 EET" duration-ms="5841" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetApp -->
-        <test-method signature="divisionOfTwoNegativeIntegers()[pri:2, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:47 EET" name="divisionOfTwoNegativeIntegers" finished-at="2026-03-10T20:39:53 EET" duration-ms="6827" status="FAIL">
+        <test-method signature="divideZeroByNegativeNumber()[pri:6, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T20:47:46 EET" name="divideZeroByNegativeNumber" finished-at="2026-03-10T20:47:56 EET" duration-ms="9993" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [1] but found [-10]]]>
+              <![CDATA[expected [0] but found [-5]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [1] but found [-10]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [-5]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at tests.DivisionTest.divisionOfTwoNegativeIntegers(DivisionTest.java:70)
+at tests.DivisionTest.divideZeroByNegativeNumber(DivisionTest.java:125)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -68,74 +60,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- divisionOfTwoNegativeIntegers -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:53 EET" name="resetApp" finished-at="2026-03-10T20:39:58 EET" duration-ms="5064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetApp -->
-        <test-method signature="divisionOfOneNegativeByOtherPositvieInteger()[pri:3, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:39:58 EET" name="divisionOfOneNegativeByOtherPositvieInteger" finished-at="2026-03-10T20:40:04 EET" duration-ms="5547" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- divisionOfOneNegativeByOtherPositvieInteger -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:40:04 EET" name="resetApp" finished-at="2026-03-10T20:40:09 EET" duration-ms="5115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetApp -->
-        <test-method signature="divisionOfOnePositvieByOtherNegativeInteger()[pri:4, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:40:09 EET" name="divisionOfOnePositvieByOtherNegativeInteger" finished-at="2026-03-10T20:40:15 EET" duration-ms="5580" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [-1] but found [0]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [-1] but found [0]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at tests.DivisionTest.divisionOfOnePositvieByOtherNegativeInteger(DivisionTest.java:97)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- divisionOfOnePositvieByOtherNegativeInteger -->
-        <test-method is-config="true" signature="resetApp()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:40:15 EET" name="resetApp" finished-at="2026-03-10T20:40:20 EET" duration-ms="5151" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetApp -->
-        <test-method signature="divideZeroByPositiveNumber()[pri:5, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:40:20 EET" name="divideZeroByPositiveNumber" finished-at="2026-03-10T20:40:24 EET" duration-ms="4566" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- divideZeroByPositiveNumber -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DivisionTest@cc43f62]" started-at="2026-03-10T20:40:24 EET" name="tearDown" finished-at="2026-03-10T20:40:26 EET" duration-ms="1479" status="PASS">
+        </test-method> <!-- divideZeroByNegativeNumber -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DivisionTest@68c9133c]" started-at="2026-03-10T20:47:56 EET" name="tearDown" finished-at="2026-03-10T20:47:58 EET" duration-ms="1975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

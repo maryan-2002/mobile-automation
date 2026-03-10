@@ -97,26 +97,25 @@ public class DivisionTest {
 //		Assert.assertEquals(result, "-1");
 //	}
 	
-//	@Test(priority =5)
-//	public void divideZeroByPositiveNumber() {
-//		clear();
-//		click("com.simplemobiletools.calculator:id/btn_0");// 0
-//		click("com.simplemobiletools.calculator:id/btn_divide");// div
-//		click("com.simplemobiletools.calculator:id/btn_5");// 5
-//		click("com.simplemobiletools.calculator:id/btn_equals");// =
-//
-//		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
-//		System.out.println("Result is: " + result);
-//		Assert.assertEquals(result, "0");
-//	}
+	@Test(priority =5)
+	public void divideZeroByPositiveNumber() {
+		clear();
+		click("com.simplemobiletools.calculator:id/btn_0");// 0
+		click("com.simplemobiletools.calculator:id/btn_divide");// div
+		click("com.simplemobiletools.calculator:id/btn_minus");// minus
+		click("com.simplemobiletools.calculator:id/btn_5");// 5
+		click("com.simplemobiletools.calculator:id/btn_equals");// =
+
+		String result = driver.findElement(By.id("com.simplemobiletools.calculator:id/result")).getText();
+		System.out.println("Result is: " + result);
+		Assert.assertEquals(result, "0");
+	}
 
 	@Test(priority =6)
 	public void divideZeroByNegativeNumber() {
 		clear();
 		click("com.simplemobiletools.calculator:id/btn_0");// 0
 		click("com.simplemobiletools.calculator:id/btn_divide");// div
-		click("com.simplemobiletools.calculator:id/btn_minus");// minus
-
 		click("com.simplemobiletools.calculator:id/btn_5");// 5
 		click("com.simplemobiletools.calculator:id/btn_equals");// =
 
