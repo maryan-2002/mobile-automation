@@ -40,26 +40,20 @@ public class AdditionTest {
     public void setup() throws Exception {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("appium:platformVersion", "15");
-        capabilities.setCapability("appium:deviceName", "emulator-5554");
+        capabilities.setCapability("appium:deviceName", "emulator-5556");
         capabilities.setCapability("appium:automationName", "UiAutomator2");
-        capabilities.setCapability("appium:app", "C:\\Users\\Dell\\Downloads\\simplacalculator.apk");
+        capabilities.setCapability("appium:app", "C:\\Users\\maria\\Downloads\\simplecalculator.apk");
         capabilities.setCapability("appium:appPackage", "com.simplemobiletools.calculator");
         capabilities.setCapability("appium:appActivity", ".activities.SplashActivity.Orange");
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), capabilities);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4729/wd/hub"), capabilities);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public void click(String id) {
         wait.until(driver -> driver.findElement(By.id(id))).click();
-    }
-
-    public void clear() {
-        WebElement clearBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id(clr)));
-        clearBtn.click();
     }
 
     @BeforeMethod
@@ -74,10 +68,10 @@ public class AdditionTest {
         driver.quit();
     }
 
-    // ---------------- TEST CASES ----------------
+    // ================= TEST CASES =================
 
     @Test
-    public void addTwoPositiveIntegers() {
+    public void addTwoPositiveIntegers() { // TC022
         click(three);
         click(add);
         click(two);
@@ -88,7 +82,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void addTwoNegativeIntegers() {
+    public void addTwoNegativeIntegers() { // TC023
         click(neg);
         click(six);
         click(add);
@@ -101,7 +95,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void negativePlusPositive() {
+    public void negativePlusPositive() { // TC024
         click(neg);
         click(five);
         click(zero);
@@ -115,7 +109,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void positivePlusNegative() {
+    public void positivePlusNegative() { // TC025
         click(seven);
         click(add);
         click(neg);
@@ -128,7 +122,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void zeroPlusPositive() {
+    public void zeroPlusPositive() { // TC026
         click(zero);
         click(add);
         click(eight);
@@ -139,7 +133,19 @@ public class AdditionTest {
     }
 
     @Test
-    public void positivePlusZero() {
+    public void zeroPlusNegative() { // TC027
+        click(zero);
+        click(add);
+        click(neg);
+        click(seven);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "-7");
+    }
+
+    @Test
+    public void positivePlusZero() { // TC028
         click(seven);
         click(add);
         click(zero);
@@ -150,7 +156,44 @@ public class AdditionTest {
     }
 
     @Test
-    public void floatPlusInteger() {
+    public void negativePlusZero() { // TC029
+        click(neg);
+        click(seven);
+        click(add);
+        click(zero);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "-7");
+    }
+
+    @Test
+    public void zeroPlusZero() { // TC030
+        click(zero);
+        click(add);
+        click(zero);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "0");
+    }
+
+    @Test
+    public void integerPlusFloat() { // TC031
+        click(seven);
+        click(add);
+        click(three);
+        click(dec);
+        click(one);
+        click(four);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "10.14");
+    }
+
+    @Test
+    public void floatPlusInteger() { // TC032
         click(three);
         click(dec);
         click(one);
@@ -164,19 +207,16 @@ public class AdditionTest {
     }
 
     @Test
-    public void twoDecimalNumbers() {
+    public void twoDecimalNumbers() { // TC033
         click(three);
         click(dec);
         click(one);
         click(four);
-
         click(add);
-
         click(one);
         click(dec);
         click(one);
         click(four);
-
         click(eq);
 
         String result = driver.findElement(By.id(res)).getText();
@@ -184,15 +224,13 @@ public class AdditionTest {
     }
 
     @Test
-    public void decimalPlusZero() {
+    public void decimalPlusZero() { // TC034
         click(three);
         click(dec);
         click(one);
         click(four);
-
         click(add);
         click(zero);
-
         click(eq);
 
         String result = driver.findElement(By.id(res)).getText();
@@ -200,31 +238,26 @@ public class AdditionTest {
     }
 
     @Test
-    public void largeNumberAddition() {
-
+    public void largeNumberAddition() { // TC035
         click(two);
         for(int i=0;i<7;i++){
             click(zero);
         }
-
         click(add);
         click(two);
         click(eq);
 
         String result = driver.findElement(By.id(res)).getText();
-        Assert.assertEquals(result, "20000002");
+        Assert.assertEquals(result, "20,000,002");
     }
 
     @Test
-    public void smallDecimalAddition() {
-
+    public void smallDecimalAddition() { // TC036
         click(zero);
         click(dec);
-
         for(int i=0;i<6;i++){
             click(zero);
         }
-
         click(two);
         click(add);
         click(two);
@@ -235,17 +268,46 @@ public class AdditionTest {
     }
 
     @Test
-    public void multipleAdditionOperations() {
+    public void operatorFirst() { // TC037
+        click(add);
+        click(two);
+        click(eq);
 
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "2");
+    }
+
+    @Test
+    public void multipleOperators() { // TC038
+        click(one);
+        click(zero);
+        click(add);
+        click(add);
+        click(one);
+        click(zero);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertEquals(result, "20");
+    }
+
+    @Test
+    public void operatorWithEmptyInput() { // TC039
+        click(add);
+        click(eq);
+
+        String result = driver.findElement(By.id(res)).getText();
+        Assert.assertTrue(result.equals("0") || result.isEmpty());
+    }
+
+    @Test
+    public void multipleAdditionOperations() { // TC040
         click(three);
         click(zero);
-
         click(add);
         click(one);
-
         click(add);
         click(one);
-
         click(eq);
 
         String result = driver.findElement(By.id(res)).getText();

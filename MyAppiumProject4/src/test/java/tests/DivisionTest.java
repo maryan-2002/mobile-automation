@@ -44,13 +44,13 @@ public class DivisionTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("appium:platformVersion", "15");
-		capabilities.setCapability("appium:deviceName", "emulator-5554");
+		capabilities.setCapability("appium:deviceName", "emulator-5556");
 		capabilities.setCapability("appium:automationName", "UiAutomator2");
-		capabilities.setCapability("appium:app", "C:\\Users\\Asus\\Downloads\\simplacalculator.apk");
+		capabilities.setCapability("appium:app", "C:\\Users\\maria\\Downloads\\simplecalculator.apk");
 		capabilities.setCapability("appium:appPackage", "com.simplemobiletools.calculator");
 		capabilities.setCapability("appium:appActivity", ".activities.SplashActivity.Orange");
-		
-		driver = new AndroidDriver(new URL("http://192.168.56.1:4723"), capabilities);
+
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4729/wd/hub"), capabilities);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
