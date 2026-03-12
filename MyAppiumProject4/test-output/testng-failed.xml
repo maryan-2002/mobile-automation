@@ -5,13 +5,14 @@
     <classes>
       <class name="tests.DivisionTest">
         <methods>
+          <include name="opFirst"/>
           <include name="tearDown"/>
+          <include name="opOnly"/>
           <include name="divideZeroByNegativeNumber"/>
           <include name="divisionOfOnePositvieByOtherNegativeInteger"/>
           <include name="setup"/>
-          <include name="resetApp"/>
           <include name="divisionOfTwoNegativeIntegers"/>
-          <include name="divideNegativeByZero"/>
+          <include name="resetApp"/>
         </methods>
       </class> <!-- tests.DivisionTest -->
     </classes>
