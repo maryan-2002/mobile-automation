@@ -3,17 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.DivisionTest">
+      <class name="tests.MultiplitionTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="divideZeroByNegativeNumber"/>
-          <include name="divisionOfOnePositvieByOtherNegativeInteger"/>
           <include name="setup"/>
+          <include name="multiplyTwoNegativeIntegers"/>
           <include name="resetApp"/>
-          <include name="divisionOfTwoNegativeIntegers"/>
-          <include name="divideNegativeByZero"/>
+          <include name="tearDown"/>
+          <include name="zeroMultiplyNegative"/>
+          <include name="positiveMultiplyNegative"/>
         </methods>
-      </class> <!-- tests.DivisionTest -->
+      </class> <!-- tests.MultiplitionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
